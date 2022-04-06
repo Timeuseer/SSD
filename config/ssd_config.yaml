@@ -1,0 +1,25 @@
+---
+# 需要加载的模型所在路径
+model_path: logs/ep003-loss8.505-val_loss8.257.h5
+# 类别文件路径
+classes_path: model_data/voc_classes.txt
+#用于预测的图像高宽，需要与模型训练时一致
+input_shape:
+    - 300
+    - 300
+# 只有得分大于阈值的预测框才会被保留下来
+confidence: 0.5
+# 非极大抑制所用到的nms_iou大小
+nms_iou: 0.45
+# 先验框的大小
+anchors_size:
+    - 30
+    - 60
+    - 111
+    - 162
+    - 213
+    - 264
+    - 315
+# 控制是否使用letterbox_image对图像进行不失真的resize
+letterbox_image: False
+...
